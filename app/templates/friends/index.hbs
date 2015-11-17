@@ -1,12 +1,12 @@
+{{link-to '<< App Index' 'application'}}
+
 <h2>Friends index</h2>
 
 <h3>Total friends: {{model.length}}</h3>
 <ul>
   {{#each model as |friend|}}
     <li>
-      {{#link-to 'friends.show' friend}}
-        {{friend.firstName}} {{friend.lastName}}
-      {{/link-to}}
+      {{link-to friend.fullName 'friends.show' friend}}
     </li>
   {{/each}}
 </ul>
