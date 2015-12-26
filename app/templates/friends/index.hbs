@@ -1,15 +1,11 @@
-{{link-to '<< App Index' 'application'}}
-
-<h2>Friends index</h2>
-
-<h3>Total friends: {{model.length}}</h3>
-{{link-to "New friend" "friends.new"}}
-
-<table>
+<table class="primary">
   <thead>
     <tr>
       <th>
         Name
+      </th>
+      <th>
+        Articles
       </th>
       <th>
 
@@ -21,6 +17,9 @@
       <tr>
         <td>
           {{link-to friend.fullName "friends.show" friend}}
+        </td>
+        <td>
+          {{friend.totalArticles}}
         </td>
         <td>
           <a href="#" {{action "delete" friend}}>Delete</a>
