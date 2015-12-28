@@ -21,7 +21,7 @@ export default Ember.Controller.extend({
       if (this.get('isValid')) {
         this.get('model').save().then((friend) => {
           this.transitionToRoute('friends.show', friend);
-        })
+        });
       } else {
         this.set('errorMessage', 'You have to fill in all the fields');
       }

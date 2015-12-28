@@ -16,7 +16,7 @@ export default Ember.Route.extend({
     delete(friend) {
       friend.destroyRecord().then(() => {
         this.transitionTo('friends.index');
-      })
+      });
     }
   }
 
