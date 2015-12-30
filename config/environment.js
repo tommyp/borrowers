@@ -6,6 +6,9 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    contentSecurityPolicy: {
+      'connect-src': "'self' http://*:35729 http://api.ember-cli-101.com"
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
