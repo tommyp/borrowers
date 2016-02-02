@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
     save() {
       if (this.get('isValid')) {
         this.get('model').save().then(() => {
-          this.transitionTo('articles');
+          this.transitionToRoute('articles');
         });
       } else {
         this.set('errorMessage', 'Description is required');
@@ -22,7 +22,7 @@ export default Ember.Controller.extend({
       return false;
     },
     cancel() {
-      this.transitionTo('articles');
+      this.transitionToRoute('articles');
     }
   }
 });
