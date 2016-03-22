@@ -5,7 +5,7 @@
   {{article.notes}}
 </td>
 <td>
-  {{article.createdAt}}
+  {{formattedDate article.createdAt 'LL'}}
 </td>
 <td>
   {{#x-select value=article.state action="saveArticle"}}
