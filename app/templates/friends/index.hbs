@@ -1,16 +1,14 @@
-<table class="primary">
+<table class="primary friends-table">
   <thead>
-    <tr>
-      <th>
-        Name
-      </th>
-      <th>
-        Articles
-      </th>
-      <th>
+    <th {{action "setSortBy" "firstName"}}>
+      Name
+    </th>
+    <th {{action "setSortBy" "totalArticles"}}>
+      Articles
+    </th>
+    <th>
 
-      </th>
-    </tr>
+    </th>
   </thead>
   <tbody>
     {{#each model as |friend|}}
